@@ -1,6 +1,7 @@
 import { Formik, Field, Form } from 'formik';
 import { useId } from 'react';
 import * as Yup from 'yup';
+import css from './ContactForm.module.css';
 
 const ContactForm = ({ handleAddContact }) => {
   const nameId = useId();
@@ -30,18 +31,24 @@ const ContactForm = ({ handleAddContact }) => {
       onSubmit={handleSubmit}
       validationSchema={ContactsSchema}
     >
-      <Form>
+      <Form className={css.boxContactForm}>
         <div>
-          <label htmlFor={nameId}>Name</label>
+          <label className={css.divLabel} htmlFor={nameId}>
+            Name
+          </label>
           <Field type="text" id={nameId} name="name" />
         </div>
 
         <div>
-          <label htmlFor={numberId}>Number</label>
+          <label className={css.divLabel} htmlFor={numberId}>
+            Number
+          </label>
           <Field type="text" id={numberId} name="number" />
         </div>
 
-        <button type="submit">Add contact</button>
+        <button className={css.btnContactForm} type="submit">
+          Add contact
+        </button>
       </Form>
     </Formik>
   );

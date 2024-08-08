@@ -1,4 +1,4 @@
-import './App.css';
+import css from './App.module.css';
 import ContactList from './components/ContactList/ContactList';
 import ContactForm from './components/ContactForm/ContactForm';
 import SearchBox from './components/SearchBox/SearchBox';
@@ -43,8 +43,8 @@ function App() {
   }, [contactsArr]);
 
   return (
-    <div>
-      <h1>Phonebook</h1>
+    <div className={css.boxApp}>
+      <h1 className={css.appTitle}>Phonebook</h1>
       <ContactForm handleAddContact={handleAddContact} />
       <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       <ContactList

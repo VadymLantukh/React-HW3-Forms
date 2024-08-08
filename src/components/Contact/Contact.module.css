@@ -1,0 +1,11 @@
+.conReact {
+  margin-right: 10px;
+  color: #fafafa;
+  width: 18px;
+  height: 18px;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+}

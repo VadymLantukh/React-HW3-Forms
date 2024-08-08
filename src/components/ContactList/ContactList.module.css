@@ -1,3 +1,11 @@
+.constactList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px;
+}
+
 .contactItem {
   border: 2px solid rgb(224, 178, 178);
   width: 320px;
@@ -8,4 +16,18 @@
   border-radius: 8px;
   padding: 0 10px;
   margin-bottom: 16px;
+}
+
+.btnDeleteList {
+  width: 60px;
+  height: 29px;
+  font-weight: 500;
+  transition: all 350ms linear;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0;
+}
+
+.btnDeleteList:hover {
+  color: rgb(31, 164, 253);
 }
