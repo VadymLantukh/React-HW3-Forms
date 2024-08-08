@@ -6,11 +6,11 @@ const Contact = ({ name, number }) => {
   return (
     <div>
       <p className={css.contactInfo}>
-        <RiContactsFill className={css.conReact}/>
+        <RiContactsFill className={css.conReact} />
         {name}
       </p>
       <p className={css.contactInfo}>
-        <MdCall className={css.conReact}/>
+        <MdCall className={css.conReact} />
         {number}
       </p>
     </div>
