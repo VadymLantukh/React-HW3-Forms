@@ -1,0 +1,11 @@
+.contactItem {
+  border: 2px solid rgb(224, 178, 178);
+  width: 320px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin-bottom: 16px;
+}
