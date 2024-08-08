@@ -8,7 +8,7 @@ import { useId } from 'react';
 function App() {
   const [contactsArr, setContactsArr] = useState(() => {
     const savedContacts = JSON.parse(window.localStorage.getItem('contacts'));
-    return savedContacts.length !== 0
+    return savedContacts !== null && savedContacts.length !== 0
       ? savedContacts
       : [
           { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
