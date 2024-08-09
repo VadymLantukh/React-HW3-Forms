@@ -45,7 +45,11 @@ const ContactForm = ({ handleAddContact }) => {
             Number
           </label>
           <Field type="text" id={numberId} name="number" />
-          <ErrorMessage name="number" component="span" />
+          <ErrorMessage
+            className={css.errorBox}
+            name="number"
+            component="span"
+          />
         </div>
 
         <button className={css.btnContactForm} type="submit">
