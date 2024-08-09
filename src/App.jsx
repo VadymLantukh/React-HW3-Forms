@@ -32,7 +32,7 @@ function App() {
     ]);
   };
 
-  const handleDeleteContact = id => {
+  const onDelete = id => {
     setContactsArr(prevContact =>
       prevContact.filter(contact => contact.id !== id)
     );
@@ -50,7 +50,7 @@ function App() {
       <ContactList
         contactsArr={filterContacts}
         setContactsArr={setContactsArr}
-        handleDeleteContact={handleDeleteContact}
+        onDelete={onDelete}
       />
     </div>
   );

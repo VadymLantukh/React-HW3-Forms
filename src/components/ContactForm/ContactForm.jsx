@@ -1,4 +1,4 @@
-import { Formik, Field, Form } from 'formik';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { useId } from 'react';
 import * as Yup from 'yup';
 import css from './ContactForm.module.css';
@@ -32,18 +32,20 @@ const ContactForm = ({ handleAddContact }) => {
       validationSchema={ContactsSchema}
     >
       <Form className={css.boxContactForm}>
-        <div>
+        <div className={css.divForm}>
           <label className={css.divLabel} htmlFor={nameId}>
             Name
           </label>
           <Field type="text" id={nameId} name="name" />
+          <ErrorMessage className={css.errorBox} name="name" component="span" />
         </div>
 
-        <div>
+        <div className={css.divForm}>
           <label className={css.divLabel} htmlFor={numberId}>
             Number
           </label>
           <Field type="text" id={numberId} name="number" />
+          <ErrorMessage name="number" component="span" />
         </div>
 
         <button className={css.btnContactForm} type="submit">
