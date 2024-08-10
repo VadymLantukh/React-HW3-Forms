@@ -47,11 +47,7 @@ function App() {
       <h1 className={css.appTitle}>Phonebook</h1>
       <ContactForm handleAddContact={handleAddContact} />
       <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
-      <ContactList
-        contactsArr={filterContacts}
-        setContactsArr={setContactsArr}
-        onDelete={onDelete}
-      />
+      <ContactList contactsArr={filterContacts} onDelete={onDelete} />
     </div>
   );
 }
